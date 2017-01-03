@@ -1,9 +1,9 @@
 actor: Tester
 paths:
-    tests: app/tests/codeception
-    log: app/tests/codeception/_output
-    data: app/tests/codeception/_data
-    helpers: app/tests/codeception/_support
+    tests: tests/codeception
+    log: tests/codeception/_output
+    data: tests/codeception/_data
+    helpers: tests/codeception/_support
 settings:
     bootstrap: _bootstrap.php
     colors: true
@@ -13,8 +13,6 @@ coverage:
     remote: false
     include:
         - app/*
-    exclude:
-        - app/storage/*
 modules:
     config:
         Db:
@@ -22,6 +20,6 @@ modules:
             #dsn: 'sqlite:app/database/bbms_testing.sqlite'
             user: 'root'
             password: ''
-            dump: app/database/dump.sql
+            dump: database/dump.sql
             populate: true
             cleanup: true
